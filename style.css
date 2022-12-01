@@ -1,0 +1,74 @@
+.board {
+    width: 500px;
+    height: 500px;
+    border: 2px solid;
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.board img {
+    max-width: 33.333%;
+    max-height: 33.333%;
+    width: 100%;
+    height: 100%;
+}
+
+.Game_Type{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Game_Type .item {
+    position: relative;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.Game_Type .item img{
+   width: 100%;
+   height: 100%;
+   max-width: 250px;
+   max-height: 250px;
+   display: flex;
+   margin: auto;
+}
+
+.isActive{
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    color: rgb(0, 255, 0);
+    background-color: rgb(0, 0, 0, 50%);
+    transform: scale(0);
+    transition: transform 250ms;
+}
+
+.Game_Type .item.active .isActive{
+    transform: scale(1);
+}
+
+._Title{
+    margin-bottom: 2rem;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width : 768px){
+    .board {
+        width: 300px;
+        height: 300px;
+    }
+}
